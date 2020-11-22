@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentAndDrive.MobileApp.Views.RezervacijeDetaljiPage"
+             xmlns:converters="clr-namespace:RentAndDrive.MobileApp.Converters"
+             Title="{Binding Title}"
+             xmlns:viewModels="clr-namespace:RentAndDrive.MobileApp.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:RezervacijeDetaljiViewModel>
+        </viewModels:RezervacijeDetaljiViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Text="Automobil: " VerticalTextAlignment="Center" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Automobil}" Padding="10" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Datum preuzimanja: " VerticalTextAlignment="Center" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DatumPreuzimanja}" Padding="10"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Datum povrata: " VerticalTextAlignment="Center" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding DatumPovrata}" Padding="10"/>
+                </Grid>
+                <Label Text="Napomena " VerticalTextAlignment="Center" />
+                <Label Text="{Binding Napomena} " VerticalTextAlignment="Center" />
+            </StackLayout>
+
+            <StackLayout x:Name="OcjenaStackLayout" IsVisible="False" Orientation="Horizontal">
+                <Label Text="Unesite ocjenu za automobil (1-10):" VerticalOptions="CenterAndExpand" />
+                <Entry WidthRequest="60" Text="{Binding OcjenaAutomobila}" />
+                <Button Text="Ocijeni" Clicked="Button_Clicked_2" HorizontalOptions="EndAndExpand"></Button>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="End">
+                <Button x:Name="OtkaziRezervacijuButton" Clicked="Button_Clicked" Text="Otkaži"></Button>
+                <Button Clicked="Button_Clicked_1" Text="Račun" BindingContext="{Binding Rezervacija}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

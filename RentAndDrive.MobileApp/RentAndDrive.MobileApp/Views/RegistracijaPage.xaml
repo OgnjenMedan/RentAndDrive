@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentAndDrive.MobileApp.Views.RegistracijaPage">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+
+            <Label Text="Ime" />
+            <Entry x:Name="Ime" Text="{Binding Ime}"/>
+
+            <Label Text="Prezime"/>
+            <Entry x:Name="Prezime" Text="{Binding Prezime}"/>
+
+            <Label Text="Email"/>
+            <Entry x:Name="Email" Text="{Binding Email}"/>
+
+            <Label Text="Telefon"/>
+            <Entry x:Name="Telefon" Text="{Binding Telefon}"/>
+
+            <Label Text="Korisničko ime"/>
+            <Entry x:Name="KorisnickoIme" Text="{Binding KorisnickoIme}" />
+        
+            <Label Text="Lozinka"/>
+            <Entry x:Name="Password" Text="{Binding Password}" IsPassword="True"/>
+
+            <Label Text="Potvrda lozinke"/>
+            <Entry x:Name="PasswordConfirm" Text="{Binding PasswordConfirm}" IsPassword="True" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Margin="15" Clicked="Button_Clicked_1" Text="Nazad"></Button>
+
+                <Button Margin="15" Clicked="Button_Clicked" Text="Registruj se"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

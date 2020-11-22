@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentAndDrive.MobileApp.Views.RacunPage"
+             Title="{Binding Title}"
+             xmlns:viewModels="clr-namespace:RentAndDrive.MobileApp.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:RacunViewModel>
+        </viewModels:RacunViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="Broj računa: " VerticalTextAlignment="Center" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding BrojRacuna}" Padding="10" />
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="Datum: " VerticalTextAlignment="Center" />
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Datum}" Padding="10"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Text="Broj dana: " VerticalTextAlignment="Center" />
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding BrojDana}" Padding="10"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Text="Cijena automobila : " VerticalTextAlignment="Center" />
+                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding CijenaAutomobila}" Padding="10"/>
+
+                        <Label Grid.Row="4" Grid.Column="0" Text="Iznos bez PDV: " VerticalTextAlignment="Center" />
+                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding IznosBezPdv}" Padding="10"/>
+
+                        <Label Grid.Row="5" Grid.Column="0" Text="PDV: " VerticalTextAlignment="Center" />
+                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding Pdv}" Padding="10"/>
+
+                        <Label Grid.Row="6" Grid.Column="0" Text="Ukupno: " VerticalTextAlignment="Center" />
+                        <Label Grid.Row="6" Grid.Column="1" Text="{Binding IznosSaPdv}" Padding="10"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

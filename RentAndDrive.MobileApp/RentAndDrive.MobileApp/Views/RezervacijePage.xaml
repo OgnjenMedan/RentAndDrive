@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentAndDrive.MobileApp.Views.RezervacijePage"
+             Title="{Binding Naslov}"
+             xmlns:viewModels="clr-namespace:RentAndDrive.MobileApp.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:RezervacijeViewModel>
+        </viewModels:RezervacijeViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding RezervacijeList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="15" Orientation="Vertical">
+                                <Label Text="{Binding DatumPreuzimanja, StringFormat='{0:MMMM dd, yyyy}'}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                                <Label Text="{Binding DatumPovrata, StringFormat='{0:MMMM dd, yyyy}'}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                                <Label Text="{Binding Napomena}"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

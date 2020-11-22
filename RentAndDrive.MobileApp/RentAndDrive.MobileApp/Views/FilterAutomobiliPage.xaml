@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="RentAndDrive.MobileApp.Views.FilterAutomobiliPage"
+             xmlns:viewModels="clr-namespace:RentAndDrive.MobileApp.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:AutomobiliFilterViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30, 40, 30, 0">
+                <Label Text="Proizvođač"/>
+                <Picker Margin="0, 0, 0, 10" ItemsSource="{Binding ProizvodjaciList}" SelectedItem="{Binding SelectedProizvodjac}" ItemDisplayBinding="{Binding Naziv}" SelectedIndexChanged="Picker_SelectedIndexChanged" />
+
+                <Label Text="Model"/>
+                <Picker Margin="0, 0, 0, 10" ItemsSource="{Binding ModeliList}" SelectedItem="{Binding SelectedModel}" ItemDisplayBinding="{Binding Naziv}"/>
+
+                <Label Text="Gorivo"/>
+                <Picker Margin="0, 0, 0, 10" ItemsSource="{Binding TipGorivaList}" SelectedItem="{Binding SelectedTipGoriva}"/>
+
+                <Label Text="Broj Vrata"/>
+                <Picker Margin="0, 0, 0, 10" ItemsSource="{Binding BrojVrataList}" SelectedItem="{Binding SelectedBrojVrata}"/>
+
+                <Label Text="Mjenjač" />
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="MjenjacAutomatik"/>
+                    <Label Text="Automatik" VerticalOptions="Center" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="MjenjacManualni"/>
+                    <Label Text="Manualni" VerticalOptions="Center" />
+                </StackLayout>
+
+                <Label Text="Cijena" Margin="0, 20, 0, 0"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Od" Margin="0, 10, 0, 0" HorizontalOptions="Center"/>
+                    <Entry Text="{Binding CijenaOd}" Margin="0, 0, 20, 0" WidthRequest="75" Keyboard="Numeric"/>
+
+                    <Label Text="Do" Margin="0, 10, 0, 0" HorizontalOptions="Center"/>
+                    <Entry Text="{Binding CijenaDo}" VerticalOptions="Center" WidthRequest="75" Keyboard="Numeric"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="0, 10, 0, 20">
+                    <Label Text="Sortiraj automobile silazno po cijeni" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                    <Switch x:Name="SortirajSilazno"  IsToggled="false" HorizontalOptions="End" />
+                </StackLayout>
+                
+                <Button Text="Filtriraj" Clicked="Button_Clicked"/>
+                
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

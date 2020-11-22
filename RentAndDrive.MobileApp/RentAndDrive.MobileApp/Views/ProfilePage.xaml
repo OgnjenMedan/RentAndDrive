@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentAndDrive.MobileApp.Views.ProfilePage"
+             Title="{Binding Title}"
+             xmlns:viewModels="clr-namespace:RentAndDrive.MobileApp.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:KupacViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            
+            <Label Text="Ime" />
+            <Entry x:Name="Ime" Text="{Binding Ime}"/>
+
+            <Label Text="Prezime"/>
+            <Entry x:Name="Prezime" Text="{Binding Prezime}"/>
+
+            <Label Text="Email"/>
+            <Entry x:Name="Email" Text="{Binding Email}"/>
+
+            <Label Text="Korisničko ime"/>
+            <Entry x:Name="KorisnickoIme" Text="{Binding KorisnickoIme}" />
+
+            <Label Text="Telefon"/>
+            <Entry x:Name="Telefon" Text="{Binding Telefon}"/>
+
+            <Label Text="Grad"/>
+            <Picker x:Name="SelectedGrad" ItemsSource="{Binding GradoviList}" SelectedItem="{Binding SelectedGradovi}" ItemDisplayBinding="{Binding Naziv}"/>
+
+            <Label Text="Lozinka"/>
+            <Entry x:Name="Password" Text="{Binding Password}" IsPassword="True" />
+
+            <Label Text="Nova lozinka"/>
+            <Entry x:Name="NewPassword" Text="{Binding NewPassword}" IsPassword="True" />
+
+            <Label Text="Potvrda lozinke"/>
+            <Entry x:Name="PasswordConfirm" Text="{Binding PasswordConfirm}" IsPassword="True" />
+
+            <Button Margin="15" Clicked="Button_Clicked" Text="Sačuvaj"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

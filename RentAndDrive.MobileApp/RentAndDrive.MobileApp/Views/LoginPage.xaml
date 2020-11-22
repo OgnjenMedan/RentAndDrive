@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentAndDrive.MobileApp.Views.LoginPage"
+             xmlns:viewModels="clr-namespace:RentAndDrive.MobileApp.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.BackgroundColor>
+        <Color>#e5e5e5</Color>
+    </ContentPage.BackgroundColor>
+    <ContentPage.Content>
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="15">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="60">
+                <Label HorizontalOptions="CenterAndExpand" Text="Rent And Drive" FontSize="29" />
+            </StackLayout>
+            <Label Text="Korisničko ime" TextColor="Black"/>
+            <Entry Text="{Binding Username}"></Entry>
+            <Label Text="Lozinka" TextColor="Black"/>
+            <Entry Text="{Binding Password}" IsPassword="True"></Entry>
+            <Label />
+            <Button Command="{Binding LoginCommand}" Text="Log in" BackgroundColor="#adadad"></Button>
+            <Button Command="{Binding RegistracijaCommand}" Text="Registracija" BackgroundColor="#cacaca"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

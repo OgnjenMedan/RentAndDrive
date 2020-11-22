@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentAndDrive.MobileApp.Views.AutomobiliDetaljiPage"
+             xmlns:converters="clr-namespace:RentAndDrive.MobileApp.Converters"
+             xmlns:viewModels="clr-namespace:RentAndDrive.MobileApp.ViewModels"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <viewModels:AutomobiliDetaljiViewModel>
+        </viewModels:AutomobiliDetaljiViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <Image Source="{Binding Slika, Converter={StaticResource imgConv}}" WidthRequest="270" HeightRequest="220"/>
+            <Label Text="{Binding Automobil}" Margin="0, 30, 0, 10"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Cijena}" Margin="0, 0, 0, 10"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Text="{Binding Mjenjac}" HorizontalOptions="StartAndExpand" Padding="0, 0, 45, 0" />
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding BrojVrata}" HorizontalOptions="StartAndExpand"  />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="{Binding Gorivo}" HorizontalOptions="StartAndExpand" />
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding BrojOsoba}" HorizontalOptions="StartAndExpand" />
+            </Grid>
+
+            <Label Text="{Binding KonjskihSnaga}"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout VerticalOptions="End" HorizontalOptions="CenterAndExpand"  Margin="0, 40, 0, 5">
+                <Button Text="Iznajmi automobil" Clicked="Button_Clicked" BackgroundColor="#404040"></Button>
+            </StackLayout>
+
+
+
+            <Label Text="Preporučeni automobili" Margin="10, 10, 0, 0"/>
+
+            <ListView x:Name="PreporuceniListView" Margin="10, 10, 0, 10" ItemsSource="{Binding preporuceniAutomobiliList, Mode=TwoWay}" ItemSelected="PreporuceniListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0, 10, 0, 0" Orientation="Vertical">
+                                <Label Text="{Binding}" HorizontalOptions="StartAndExpand" Style="{DynamicResource ListItemDetailTextStyle}" />
+                                <StackLayout>
+                                    <Image Source="{Binding Slika, Converter={StaticResource imgConv}}" WidthRequest="180" HeightRequest="110"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
