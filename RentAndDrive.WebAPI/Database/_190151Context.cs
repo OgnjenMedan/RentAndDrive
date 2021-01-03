@@ -33,7 +33,7 @@ namespace RentAndDrive.WebAPI.Database
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.;Database=190151;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.;Database=RentAndDriveDocker;Trusted_Connection=True;");
             }
         }
 

@@ -281,7 +281,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto2
-           
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 10,
@@ -301,7 +301,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto3
-           
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 11,
@@ -321,7 +321,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto4
-         
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 12,
@@ -341,7 +341,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto5
-        
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 13,
@@ -361,7 +361,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto6
-          
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 14,
@@ -381,7 +381,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto7
-           
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 15,
@@ -401,7 +401,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto8
-          
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 16,
@@ -421,7 +421,7 @@ namespace RentAndDrive.WebAPI.Database
             #endregion
 
             #region auto9
-            
+
             modelBuilder.Entity<Automobili>().HasData(new RentAndDrive.WebAPI.Database.Automobili()
             {
                 AutomobilId = 17,
@@ -464,9 +464,9 @@ namespace RentAndDrive.WebAPI.Database
                 KorisnikId = 8,
                 Ime = "Admin",
                 Prezime = "Admin",
-                Email = "desktop@mail.com",
+                Email = "administrator@mail.com",
                 Telefon = "+38711222333",
-                KorisnickoIme = "desktop",
+                KorisnickoIme = "administrator",
                 LozinkaHash = "DyHmfUc4dY2AeLvmkjU5KVOKLpU=",
                 LozinkaSalt = "6GVah6aJtuO7XJGw4a5yWg==",
                 Status = true
@@ -477,7 +477,7 @@ namespace RentAndDrive.WebAPI.Database
                 KorisnikId = 9,
                 Ime = "manager",
                 Prezime = "manager",
-                Email = "manager@mail",
+                Email = "manager@mail.com",
                 Telefon = "+38763111222",
                 KorisnickoIme = "manager",
                 LozinkaHash = "1O/VErIwrPAiaxjIsLgMYF6q8sU=",

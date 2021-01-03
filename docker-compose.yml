@@ -20,7 +20,7 @@ services:
     environment:
       - ConnectionStrings:RentAndDrive=Server=rentanddrive-sql,1433;Database=RentAndDriveDocker;User=sa;Password=QWElkj132!;ConnectRetryCount=0
     ports:
-      - 5000:80
+      - 52223:80
     networks:
       - rentanddrive      
     links:
