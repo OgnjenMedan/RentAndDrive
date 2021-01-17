@@ -153,7 +153,7 @@
             this.txtSnaga.Name = "txtSnaga";
             this.txtSnaga.Size = new System.Drawing.Size(121, 20);
             this.txtSnaga.TabIndex = 43;
-            this.txtSnaga.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Validating);
+            this.txtSnaga.Validating += new System.ComponentModel.CancelEventHandler(this.txtSnaga_Validating);
             // 
             // label8
             // 

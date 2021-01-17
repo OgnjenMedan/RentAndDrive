@@ -102,5 +102,17 @@ namespace RentAndDrive.WinUI
                 err.SetError(numeric, null);
             }
         }
+
+        public static void RequiredNumberString(NumericUpDown numeric, CancelEventArgs e, ErrorProvider err, string poruka)
+        {
+            if (numeric.Value == 0)
+            {
+                err.SetError(numeric, poruka);
+                e.Cancel = true;
+            } else
+            {
+                err.SetError(numeric, null);
+            }
+        }
     }
 }

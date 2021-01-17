@@ -173,5 +173,17 @@ namespace RentAndDrive.WinUI.Automobili
         {
             Validator.RequiredFieldCmb(sender as ComboBox, e, errorProvider, Properties.Resources.RequiredField);
         }
+
+        private void txtSnaga_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSnaga.Text) || !int.TryParse(txtSnaga.Text, out int ks))
+            {
+                errorProvider.SetError(txtSnaga, Properties.Resources.RequiredAndOnlyNumbersAllowed);
+                e.Cancel = true;
+            } else
+            {
+                errorProvider.SetError(txtSnaga, null);
+            }
+        }
     }
 }

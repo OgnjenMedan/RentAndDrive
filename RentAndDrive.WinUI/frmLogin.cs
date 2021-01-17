@@ -26,21 +26,13 @@ namespace RentAndDrive.WinUI
 
                 var korisnici = await _userService.Get<List<Model.Korisnici>>(new KorisniciSearchRequest() { KorisnickoIme = APIService.Username });
                 var korisnik = korisnici.Where(x => x.KorisnickoIme == APIService.Username).FirstOrDefault();
-                               
+
                 await _ulogeService.Get<dynamic>(null);
-                if (korisnik != null)
-                {
-                    frmIndex frmIndex = new frmIndex();
-                    frmIndex.Show();
 
-                } else
-                {
-                    MessageBox.Show("Pogrešno korisničko ime ili lozinka!");
-                }
-
+                frmIndex frmIndex = new frmIndex();
+                frmIndex.Show();
             } catch (Exception ex)
             {
-                MessageBox.Show("Greška na serveru!");
             }
         }
     }

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace RentAndDrive.WebAPI.Controllers
 {
-    [Authorize]
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
+    [Authorize]
     public class KorisniciController : ControllerBase
     {
         private readonly IKorisnikService _service;

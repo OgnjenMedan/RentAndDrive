@@ -61,6 +61,15 @@ namespace RentAndDrive.WinUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Polje je obavezno i može sadržavati samo brojčanu vrijednost!.
+        /// </summary>
+        internal static string RequiredAndOnlyNumbersAllowed {
+            get {
+                return ResourceManager.GetString("RequiredAndOnlyNumbersAllowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Obavezno polje!.
         /// </summary>
         internal static string RequiredField {

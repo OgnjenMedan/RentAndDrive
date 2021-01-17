@@ -34,8 +34,18 @@ namespace RentAndDrive.WinUI
                 query += await search?.ToQueryString();
             }
 
-            var list = await $"{url}{query}".WithBasicAuth(Username, Password).GetJsonAsync<T>();
-            return list;
+            try
+            {
+                var list = await $"{url}{query}".WithBasicAuth(Username, Password).GetJsonAsync<T>();
+                return list;
+            } catch (FlurlHttpException ex)
+            {
+                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    MessageBox.Show("Niste authentificirani!");
+                }
+                throw;
+            }
         }
 
         public async Task<T> GetById<T>(object id)
