@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="PositiveNumbersOnly" xml:space="preserve">
+    <value>Vrijednost ne može biti negativan broj!</value>
+  </data>
   <data name="RequiredAndOnlyNumbersAllowed" xml:space="preserve">
     <value>Polje je obavezno i može sadržavati samo brojčanu vrijednost!</value>
   </data>

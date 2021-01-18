@@ -35,12 +35,6 @@
             this.btnPrikazi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvRezervacije = new System.Windows.Forms.DataGridView();
-            this.cmbProizvodjac = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpOd = new System.Windows.Forms.DateTimePicker();
-            this.dtpDo = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.RezervacijaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kupac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Automobil = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +43,12 @@
             this.DatumKreiranjaRezervacije = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Napomena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.cmbProizvodjac = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpOd = new System.Windows.Forms.DateTimePicker();
+            this.dtpDo = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).BeginInit();
             this.SuspendLayout();
@@ -128,57 +128,6 @@
             this.dgvRezervacije.Size = new System.Drawing.Size(941, 352);
             this.dgvRezervacije.TabIndex = 0;
             // 
-            // cmbProizvodjac
-            // 
-            this.cmbProizvodjac.FormattingEnabled = true;
-            this.cmbProizvodjac.Location = new System.Drawing.Point(374, 41);
-            this.cmbProizvodjac.Name = "cmbProizvodjac";
-            this.cmbProizvodjac.Size = new System.Drawing.Size(215, 21);
-            this.cmbProizvodjac.TabIndex = 33;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(371, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Proizvođač";
-            // 
-            // dtpOd
-            // 
-            this.dtpOd.CustomFormat = "";
-            this.dtpOd.Location = new System.Drawing.Point(15, 89);
-            this.dtpOd.Name = "dtpOd";
-            this.dtpOd.Size = new System.Drawing.Size(200, 20);
-            this.dtpOd.TabIndex = 34;
-            // 
-            // dtpDo
-            // 
-            this.dtpDo.CustomFormat = "";
-            this.dtpDo.Location = new System.Drawing.Point(232, 89);
-            this.dtpDo.Name = "dtpDo";
-            this.dtpDo.Size = new System.Drawing.Size(200, 20);
-            this.dtpDo.TabIndex = 35;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(229, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 13);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Do";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 13);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Od";
-            // 
             // RezervacijaId
             // 
             this.RezervacijaId.DataPropertyName = "RezervacijaId";
@@ -251,6 +200,58 @@
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Status.Width = 62;
+            // 
+            // cmbProizvodjac
+            // 
+            this.cmbProizvodjac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProizvodjac.FormattingEnabled = true;
+            this.cmbProizvodjac.Location = new System.Drawing.Point(374, 41);
+            this.cmbProizvodjac.Name = "cmbProizvodjac";
+            this.cmbProizvodjac.Size = new System.Drawing.Size(215, 21);
+            this.cmbProizvodjac.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(371, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Proizvođač";
+            // 
+            // dtpOd
+            // 
+            this.dtpOd.CustomFormat = "";
+            this.dtpOd.Location = new System.Drawing.Point(15, 89);
+            this.dtpOd.Name = "dtpOd";
+            this.dtpOd.Size = new System.Drawing.Size(200, 20);
+            this.dtpOd.TabIndex = 34;
+            // 
+            // dtpDo
+            // 
+            this.dtpDo.CustomFormat = "";
+            this.dtpDo.Location = new System.Drawing.Point(232, 89);
+            this.dtpDo.Name = "dtpDo";
+            this.dtpDo.Size = new System.Drawing.Size(200, 20);
+            this.dtpDo.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(229, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 13);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Do";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 13);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Od";
             // 
             // frmRezervacije
             // 

@@ -38,6 +38,7 @@
             // 
             // cbKupci
             // 
+            this.cbKupci.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKupci.FormattingEnabled = true;
             this.cbKupci.Location = new System.Drawing.Point(36, 55);
             this.cbKupci.Name = "cbKupci";

@@ -199,6 +199,7 @@
             // 
             // cbxModeli
             // 
+            this.cbxModeli.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxModeli.FormattingEnabled = true;
             this.cbxModeli.Location = new System.Drawing.Point(167, 43);
             this.cbxModeli.Name = "cbxModeli";
@@ -207,6 +208,7 @@
             // 
             // cbxProzivodjaci
             // 
+            this.cbxProzivodjaci.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProzivodjaci.FormattingEnabled = true;
             this.cbxProzivodjaci.Location = new System.Drawing.Point(15, 43);
             this.cbxProzivodjaci.Name = "cbxProzivodjaci";

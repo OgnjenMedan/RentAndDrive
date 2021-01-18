@@ -61,6 +61,15 @@ namespace RentAndDrive.WinUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vrijednost ne može biti negativan broj!.
+        /// </summary>
+        internal static string PositiveNumbersOnly {
+            get {
+                return ResourceManager.GetString("PositiveNumbersOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Polje je obavezno i može sadržavati samo brojčanu vrijednost!.
         /// </summary>
         internal static string RequiredAndOnlyNumbersAllowed {

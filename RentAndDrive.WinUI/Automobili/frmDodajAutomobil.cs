@@ -176,9 +176,15 @@ namespace RentAndDrive.WinUI.Automobili
 
         private void txtSnaga_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSnaga.Text) || !int.TryParse(txtSnaga.Text, out int ks))
+            bool isNumber = int.TryParse(txtSnaga.Text, out int ks);
+
+            if (string.IsNullOrWhiteSpace(txtSnaga.Text) || !isNumber)
             {
                 errorProvider.SetError(txtSnaga, Properties.Resources.RequiredAndOnlyNumbersAllowed);
+                e.Cancel = true;
+            } else if (isNumber && ks < 0)
+            {
+                errorProvider.SetError(txtSnaga, Properties.Resources.PositiveNumbersOnly);
                 e.Cancel = true;
             } else
             {

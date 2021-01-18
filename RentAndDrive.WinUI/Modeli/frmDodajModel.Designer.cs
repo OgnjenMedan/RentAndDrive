@@ -48,6 +48,7 @@
             // 
             // cbxProizvodjaci
             // 
+            this.cbxProizvodjaci.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProizvodjaci.FormattingEnabled = true;
             this.cbxProizvodjaci.Location = new System.Drawing.Point(52, 52);
             this.cbxProizvodjaci.Name = "cbxProizvodjaci";
