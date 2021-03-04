@@ -13,7 +13,7 @@
 
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="15">
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="60">
-                <Label HorizontalOptions="CenterAndExpand" Text="Rent And Drive" FontSize="29" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Rent And Drive" FontSize="29" TextColor="Black"/>
             </StackLayout>
             <Label Text="Korisničko ime" TextColor="Black"/>
             <Entry Text="{Binding Username}"></Entry>

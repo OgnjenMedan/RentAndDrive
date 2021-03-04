@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace RentAndDrive.WebAPI.Services
 {
@@ -84,7 +85,11 @@ namespace RentAndDrive.WebAPI.Services
 
         private void UcitajAutomobile(int id)
         {
-            List<Database.Automobili> ostaliAutomobili = _context.Automobili.Where(x => x.AutomobilId != id && x.Status).ToList();
+            List<Database.Automobili> ostaliAutomobili = _context.Automobili
+                .Include(x => x.Model)
+                .Include(x => x.Model.Proizvodjac)
+                .Where(x => x.AutomobilId != id && x.Status)
+                .ToList();
             List<Database.Ocjene> ocjene;
             foreach (Database.Automobili item in ostaliAutomobili)
             {
